@@ -8,7 +8,7 @@ Author: Ruizhang1993 (zhang1rui4@foxmail.com)
 import tensorflow as tf
 from prepro import create_vocabulary, create_yelp_ids
 from solver import Solver
-from model import BiLSTM
+from model import CNN
 
 flags = tf.app.flags
 flags.DEFINE_string('mode', 'test', "train or test")
@@ -32,11 +32,11 @@ if __name__ == '__main__':
     if not tf.gfile.Exists(FLAGS.model_save_dir):
         tf.gfile.MakeDirs(FLAGS.model_save_dir)
 
-    model = BiLSTM(vocab_size=FLAGS.vocab_size,
-                   batch_size=FLAGS.batch_size,
-                   embedding_size=FLAGS.num_embedding_units,
-                   num_hidden_size=FLAGS.num_hidden_units,
-                   maxlen=FLAGS.maxlen)
+    model = CNN(vocab_size=FLAGS.vocab_size,
+                batch_size=FLAGS.batch_size,
+                embedding_size=FLAGS.num_embedding_units,
+                num_hidden_size=FLAGS.num_hidden_units,
+                maxlen=FLAGS.maxlen)
     solver = Solver(model=model,
                     training_iter=FLAGS.train_step,
                     word2idx=word2idx,

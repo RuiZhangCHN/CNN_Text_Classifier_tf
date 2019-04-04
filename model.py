@@ -6,7 +6,7 @@ Author: Ruizhang1993 (zhang1rui4@foxmail.com)
 """
 import tensorflow as tf
 
-class BiLSTM(object):
+class CNN(object):
 
     def __init__(self,
                  vocab_size,
