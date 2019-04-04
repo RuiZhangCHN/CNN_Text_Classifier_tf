@@ -25,7 +25,7 @@
  - **create_vocabulary:** 生成word2idx和idx2word。（可针对自己的数据集仿写该代码）
  - **create_yelp_ids:** 读取yelp数据文件生成ids文件。（可针对自己的数据集仿写该代码）
 
-#### ii) model.BiLSTM:
+#### ii) model.CNN:
  - **build_model:** 构建具有带训练参数的模型节点。
  - **build_graph:** 构建计算图。
  
